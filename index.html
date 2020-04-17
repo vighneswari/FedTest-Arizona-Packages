@@ -83,9 +83,6 @@
     function resetform() {//on cancel and close modal
         document.getElementById("formreset").reset();
     }
-    function submitsucess(){ //on subbit
-     alert("Comments submitted successfully :-) ")
-    }
 </script>
 <div class="container">
     <h2 style= "color:orangered">Southwestern Vacations</h2>
@@ -157,9 +154,6 @@
             </ul>
         </div>
         <div class="column" style="padding-left: 7%;" >
-
-<!--            <button type="button" class="btn-contactus btn-lg" data-toggle="modal" data-target="#contact">Contact Us</button>-->
-
         </div>
 
     </div>
@@ -169,26 +163,18 @@
 
         <div id="id01" class="w3-modal">
             <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="max-width:600px">
-
-
-
-                <form id="formreset" class="w3-container" action="/action_page.php">
+                <form id="formreset" class="w3-container" action="/test.html">
                     <div class="w3-section">
                         <label><b>Username</b></label>
                         <input class="w3-input w3-border w3-margin-bottom" type="text" size="5";placeholder="Enter Username" name="usrname" required>
-                        <label><b>Password</b></label>
-                        <input class="w3-input w3-border" type="password" placeholder="Enter Password" name="psw" required>
+                        <label><b>Email Address</b></label>
+                        <input class="w3-input w3-border" type="email" placeholder="Enter Email Address" name="email" required>
                         <label><b>Comments</b></label>
                         <input class="w3-input w3-border" type="text" placeholder="Enter your comments here" name="comments" required>
                         <button style="background-color: orange;"class="w3-button w3-block w3-section w3-padding" type="submit" onclick="submitsucess()">Submit</button>
-                        <button style="background-color: orange;"class="w3-button w3-block  w3-section w3-padding" type="submit" onclick="resetform()">Cancel</button>
+                        <button style="background-color: orange;"class="w3-button w3-block  w3-section w3-padding"  onclick="document.getElementById('id01').style.display='none' ;resetform()" type="button" class="w3-button w3-red" >Cancel</button>
                     </div>
                 </form>
-
-                <div class="w3-container w3-border-top w3-padding-16 w3-light-grey">
-                    <button onclick="document.getElementById('id01').style.display='none'" type="button" class="w3-button w3-red">Close Modal</button>
-
-                </div>
 
             </div>
         </div>
